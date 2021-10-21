@@ -1,0 +1,45 @@
+{{ "<!-- navigation -->" | safeHTML }}
+<header class="navigation">
+  <div class="container">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+        <a class="navbar-brand desktop-view" href="{{ .Site.BaseURL }}">Jim部落格</a>
+        <div style="width: 60%;"></div>
+        <ul class="navbar-nav">
+          {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+              aria-expanded="false">
+              {{ .Name }}
+            </a>
+            <div class="dropdown-menu">
+              {{ range .Children }}
+              <a class="dropdown-item" href="{{ .URL | absURL }}">{{ .Name }}</a>
+              {{ end }}
+            </div>
+          </li>
+          {{ else }}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ .URL | absURL }}">{{ .Name }}</a>
+          </li>
+          {{ end }}
+          {{ end }}
+        </ul>
+
+        {{ if .Site.Params.search.enable }}
+        {{ "<!-- search -->" | safeHTML }}
+        <div class="search pl-lg-4" style="float: right;">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="{{ .Site.BaseURL }}/search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        {{ end }}
+    </nav>
+  </div>
+</header>
+{{ "<!-- /navigation -->" | safeHTML }}
