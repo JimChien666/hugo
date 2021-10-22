@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      {{ partial "sidebar.html" . }}
+    </div>
+    <div class="col-lg-8 mb-5 mb-lg-0">
+      <div class="row">
+        {{ range .Site.Params.book }}
+        <div class="col-lg-8 mx-auto text-center">
+          <h4 class="widget-title">{{ .title }}</h4>
+          <div class="content">
+            {{ .status }}
+          </div>
+        </div>
+        {{ end }}
+        {{ range .Site.Params.book }}
+        <div>{{ .title }}</div>
+        <div>{{ .status }}</div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
