@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on JimChien</title>
-    <link>https://demo.gethugothemes.com/categories/</link>
+    <link>https://jimchien666.github.io/categories/</link>
     <description>Recent content in Categories on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Wed, 30 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 30 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>面試</title>
-      <link>https://demo.gethugothemes.com/categories/%E9%9D%A2%E8%A9%A6/</link>
+      <link>https://jimchien666.github.io/categories/%E9%9D%A2%E8%A9%A6/</link>
       <pubDate>Wed, 30 Jun 2021 10:07:47 +0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/categories/%E9%9D%A2%E8%A9%A6/</guid>
+      <guid>https://jimchien666.github.io/categories/%E9%9D%A2%E8%A9%A6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://demo.gethugothemes.com/categories/java/</link>
+      <link>https://jimchien666.github.io/categories/java/</link>
       <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
       
-      <guid>https://demo.gethugothemes.com/categories/java/</guid>
+      <guid>https://jimchien666.github.io/categories/java/</guid>
       <description></description>
     </item>
     

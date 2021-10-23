@@ -102,10 +102,17 @@ status = "未讀"
 share = "想分享"
 
 [[params.article]]
+title = "A Software Developer's Guide to HTTP"
+link = "https://odetocode.com/Articles/741.aspx"
+status = "已讀"
+share = "想分享"
+
+[[params.article]]
 title = "Laravel 原始碼分析"
 link = "https://mileschou.github.io/ironman/2019/analyze-laravel"
 status = "未讀"
 share = "想分享"
+
 
 [[params.myarticle]]
 title = "跟著官方文件學習Laravel, 並實作出一個會員登入系統"

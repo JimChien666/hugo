@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>booklist on JimChien</title>
-    <link>https://demo.gethugothemes.com/booklist/</link>
+    <link>https://jimchien666.github.io/booklist/</link>
     <description>Recent content in booklist on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0000</lastBuildDate><atom:link href="https://demo.gethugothemes.com/booklist/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Oct 2019 13:49:23 +0000</lastBuildDate><atom:link href="https://jimchien666.github.io/booklist/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
