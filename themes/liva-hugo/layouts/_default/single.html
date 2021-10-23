@@ -3,7 +3,7 @@
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-8 mx-auto">
+      <div class="col-lg-10 mx-auto">
         {{ range .Params.Categories }}
         <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}"
           class="text-primary">{{ . | title | humanize }}</a>
@@ -13,12 +13,10 @@
           <span>By {{if .Params.Author}}{{ .Params.Author }}{{else}}{{.Site.Params.Author}}{{end}}</span>
           {{ if not .Params.HideDate }}
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>{{ .PublishDate.Format "02 January 2006" }}</span>
+          <span>{{ .PublishDate.Format "2006/01/02" }}</span>
           {{ end }}
         </div>
-        {{ if .Params.image }}
-        <img src="{{ .Params.Image | absURL }}" class="img-fluid w-100 mb-4" alt="{{ .Title | markdownify }}">
-        {{ end }}
+        <hr>
         <div class="content mb-5">
           {{ .Content }}
         </div>

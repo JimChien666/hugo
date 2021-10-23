@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://demo.gethugothemes.com/liva/"
+baseURL = "https://demo.gethugothemes.com/"
 languageCode = "zh-tw"
 title = "JimChien"
 theme = "liva-hugo"
@@ -44,19 +44,19 @@ disqusShortname = ""
 [menu]
 
   # main menu
-  [[menu.main]]
-  name = "關於我"
-  URL = "about"
-  weight = 1
 
   [[menu.main]]
   name = "文章"
   URL = "blog"
-  weight = 2
+  weight = 1
 
   [[menu.main]]
   name = "讀書清單"
   URL = "booklist"
+  weight = 2
+  [[menu.main]]
+  name = "關於我"
+  URL = ""
   weight = 3
 
 
@@ -91,12 +91,22 @@ title = "github"
 icon = "ti-github" 
 link = "https://github.com/JimChien666"
 
+[[params.social]]
+title = "twitter"
+icon = "ti-twitter" 
+link = "https://github.com/JimChien666"
+
 [[params.book]]
-title = "github"
+title = "30天與Docker做好朋友"
 status = "未讀"
-[[params.book]]
-title = "github"
+share = "想分享"
+
+[[params.article]]
+title = "Laravel 原始碼分析"
+link = "https://mileschou.github.io/ironman/2019/analyze-laravel"
 status = "未讀"
-[[params.book]]
-title = "github"
-status = "未讀"
+share = "想分享"
+
+[[params.myarticle]]
+title = "跟著官方文件學習Laravel, 並實作出一個會員登入系統"
+link = "https://ithelp.ithome.com.tw/users/20141109/ironman/4412"

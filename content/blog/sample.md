@@ -1,13 +1,11 @@
 ---
-title: "How To Use Checklists To Improve Your UX"
+title: "Spring 中控制反轉及依賴注入"
 date: 2019-10-29T10:07:47+06:00
-draft: false
+draft: true
 
-# post thumb
-image: "images/featured-post/post-1.jpg"
 
 # meta description
-description: "this is meta description"
+description: "IOC 及 DI 的運作"
 
 # taxonomies
 categories:

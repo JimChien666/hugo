@@ -4,23 +4,53 @@
   <div class="container">
     <div class="row">
       {{ partial "sidebar.html" . }}
-    </div>
-    <div class="col-lg-8 mb-5 mb-lg-0">
-      <div class="row">
-        {{ range .Site.Params.book }}
-        <div class="col-lg-8 mx-auto text-center">
-          <h4 class="widget-title">{{ .title }}</h4>
-          <div class="content">
-            {{ .status }}
-          </div>
+      <div class="col-lg-8 mb-5 mb-lg-0">
+        <div class="row">
+          <table class="table table-sm">
+            <h3>好書待讀</h3>
+            <thead>
+              <tr>
+                <th scope="col">書名</th>
+                <th scope="col">狀態</th>
+                <th scope="col">分享狀態</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range .Site.Params.book }}
+                  <tr>
+                    <td>{{ .title }}</td>
+                    <td>{{ .status }}</td>
+                    <td>{{ .share }}</td>
+                  </tr>
+                
+              {{ end }}
+            </tbody>
+          </table>
+          <hr>
+          <table class="table table-sm">
+            <h3>好文待讀</h3>
+            <thead>
+              <tr>
+                <th scope="col">文章</th>
+                <th scope="col">狀態</th>
+                <th scope="col">分享狀態</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range .Site.Params.article }}
+                  <tr>
+                    <td><a href="{{ .link }}">{{ .title }}</a></td>
+                    <td>{{ .status }}</td>
+                    <td>{{ .share }}</td>
+                  </tr>
+                
+              {{ end }}
+            </tbody>
+          </table>
         </div>
-        {{ end }}
-        {{ range .Site.Params.book }}
-        <div>{{ .title }}</div>
-        <div>{{ .status }}</div>
-        {{ end }}
       </div>
     </div>
+    
   </div>
 </section>
 {{ end }}
