@@ -110,14 +110,14 @@
           <span>By Jim Chien</span>
           
           <span class="border-bottom border-primary px-2 mx-1"></span>
-          <span>2019/10/29</span>
+          <span>2021/06/29</span>
           
         </div>
         <hr>
         <div class="content mb-5">
           <!-- raw HTML omitted -->
 <h4 id="ioc--inversion-of-control-控制反轉">IoC = Inversion of Control (控制反轉)</h4>
-<p>什麼是IoC呢？我們以印表機來舉個例子。</p>
+<p>什麼是 IoC 呢？我們以印表機來舉個例子。</p>
 <p>假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫</p>
 <pre tabindex="0"><code>public interface Printer {
     void print(String message);
@@ -151,9 +151,9 @@ public class Student {
         System.out.println(&quot;Canon印表機: &quot; + message);
     }
 }
-</code></pre><p>這時候，如果老師跟學生都要統一換成新品牌時，我們必須改兩個地方，會造成一個困擾，假設我用10次，就要改10次，非常麻煩</p>
+</code></pre><p>這時候，如果老師跟學生都要統一換成新品牌時，我們必須改兩個地方，會造成一個困擾，假設我用 10 次，就要改 10 次，非常麻煩</p>
 <p>而學生跟老師只是需要一台印表機，並不在乎品牌．</p>
-<p>這時候呢spring出現了，他幫我們保管了印表機這個Object，而當有人需要使用印表機時，Spring就會提供他使用</p>
+<p>這時候呢 Spring 出現了，他幫我們保管了印表機這個 Object，而當有人需要使用印表機時，Spring 就會提供他使用</p>
 <p>程式就變這樣</p>
 <pre tabindex="0"><code>public class Teacher {
     private Printer;
@@ -168,20 +168,20 @@ public class Student {
         printer.print(&quot;I'm a student&quot;);
     }
 }
-</code></pre><p>當程式啟動時，Spring會預先存放一台印表機object在Spring 容器內，而當老師或學生需要使用時，容器會提供給他們使用</p>
+</code></pre><p>當程式啟動時，Spring 會預先存放一台印表機 Object 在Spring 容器內，而當老師或學生需要使用時，容器會提供給他們使用</p>
 <p>好了我們再回頭看IoC的定義</p>
-<p>原本印表幾的控制權教在Teacher和 Student手上，而利用Spring後，控制權轉交到Spring 容器手上</p>
-<p>由Spring 容器去new Object，這會帶來以下好處：</p>
+<p>原本印表幾的控制權教在 Teacher 和 Student 手上，而利用 Spring 後，控制權轉交到 Spring 容器手上</p>
+<p>由 Spring 容器去 new Object，這會帶來以下好處：</p>
 <ol>
 <li>Loose coupling 鬆耦合</li>
-<li>Lifecycle Management生命週期管理</li>
+<li>Lifecycle Management 生命週期管理</li>
 <li>More testable 方便測試</li>
 </ol>
-<p>在我們了解SpringIoC觀念後，我們來講講如何將印表機交給Spring容器管理</p>
+<p>在我們了解 Spring IoC 觀念後，我們來講講如何將印表機交給 Spring 容器管理</p>
 <h4 id="component">@Component</h4>
 <ul>
-<li>用法：只能加在class上</li>
-<li>用途：將該class變成Spring 容所管理的object</li>
+<li>用法：只能加在 class 上</li>
+<li>用途：將該 class 變成 Spring 容所管理的 object</li>
 </ul>
 <pre tabindex="0"><code>@Component
 public class HpPrinter implements Printer{
@@ -190,11 +190,11 @@ public class HpPrinter implements Printer{
         System.out.println(&quot;HP印表機: &quot; + message);
     }
 }
-</code></pre><p>這時再啟動Spring 程式時，Spring會提供一個Spring容器，並把有@Component註解的class new出一個object並存放在容器內，而這些被Spring容器創建並管理的Object，我們統稱為Bean。</p>
-<p>hint. Bean的名稱為class name的第一個字母轉小寫</p>
+</code></pre><p>這時再啟動 Spring 程式時，Spring 會提供一個 Spring 容器，並把有 @Component 註解的 class new 出一個 object 並存放在容器內，而這些被 Spring 容器創建並管理的 Object，我們統稱為 Bean。</p>
+<p>hint. Bean 的名稱為 class name 的第一個字母轉小寫</p>
 <p><img src="../../images/post/post1-1.jpg" alt="image"></p>
 <h4 id="di--dependency-injection-依賴注入">DI = Dependency Injection (依賴注入)</h4>
-<p>我們已經成功將hpPrinter成功註冊到Spring容器內，接下來我們要讓Teacher和Student能夠取得這台hpPrinter</p>
+<p>我們已經成功將 hpPrinter 成功註冊到 Spring 容器內，接下來我們要讓 Teacher 和 Student 能夠取得這台 hpPrinter</p>
 <p>有兩個步驟</p>
 <ol>
 <li>將Teacher也變成Bean</li>
@@ -208,11 +208,11 @@ public class Teacher {
         printer.print(&quot;I'm a teacher&quot;);
     }
 }
-</code></pre><p>在printer上加上@Autowired，Spring就會將hpPrinter交給teacher，這個動作稱之為Dependency Injection(依賴注入)</p>
-<p>這時teacher就可以拿hpPrinter去印東西了。</p>
+</code></pre><p>在 printer 上加上 @Autowired，Spring 就會將 hpPrinter 交給 teacher，這個動作稱之為 Dependency Injection(依賴注入)</p>
+<p>這時 teacher 就可以拿 hpPrinter 去印東西了。</p>
 <h4 id="總結">總結</h4>
-<p>IoC與DI相輔相成，IoC將object存放在容器裡面，而DI使Object可以取得其他Object來使用</p>
-<p>以下為Spring IoC 常見名詞：</p>
+<p>IoC 與 DI 相輔相成，IoC 將 Object 存放在容器裡面，而 DI 使 Object 可以取得其他 Object 來使用</p>
+<p>以下為 Spring IoC 常見名詞：</p>
 <ul>
 <li>
 <p>IoC = Inversion of Control (控制反轉)</p>

@@ -6,16 +6,15 @@
     <description>Recent content in Spring on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Tue, 29 Oct 2019 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/tags/spring/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Spring 中控制反轉及依賴注入</title>
       <link>https://jimchien666.github.io/blog/post1/</link>
-      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      <pubDate>Tue, 29 Jun 2021 10:07:47 +0600</pubDate>
       
       <guid>https://jimchien666.github.io/blog/post1/</guid>
-      <description>IoC = Inversion of Control (控制反轉) 什麼是IoC呢？我們以印表機來舉個例子。
-假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫
-public interface Printer { void print(String message); } public class HpPrinter implements Printer{ @Override public void print(String message){ System.</description>
+      <description>IoC = Inversion of Control (控制反轉) 什麼是 IoC 呢？我們以印表機來舉個例子。
+假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫</description>
     </item>
     
   </channel>
