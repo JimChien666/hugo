@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JimChien</title>
+    <link>https://demo.gethugothemes.com/</link>
+    <description>Recent content on JimChien</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Wed, 30 Jun 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://demo.gethugothemes.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>104 面試前測 Codility</title>
+      <link>https://demo.gethugothemes.com/blog/interview1/</link>
+      <pubDate>Wed, 30 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/blog/interview1/</guid>
+      <description>前幾天投了104履歷，非常想進這間公司做，然後在昨天時，收到104的一封信，是要先做一份類似小測驗，收到當下滿開心的。
+於是當天下班，我就很興奮地準備來寫這份小測驗，其中遇到一題滿有趣的，順手紀錄一下
+There are N bulbs, numbered from 1 to N, arranged in a row.</description>
+    </item>
+    
+    <item>
+      <title>Spring 中控制反轉及依賴注入</title>
+      <link>https://demo.gethugothemes.com/blog/post1/</link>
+      <pubDate>Tue, 29 Oct 2019 10:07:47 +0600</pubDate>
+      
+      <guid>https://demo.gethugothemes.com/blog/post1/</guid>
+      <description>IoC = Inversion of Control (控制反轉) 什麼是IoC呢？我們以印表機來舉個例子。
+假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫
+public interface Printer { void print(String message); } public class HpPrinter implements Printer{ @Override public void print(String message){ System.</description>
+    </item>
+    
+  </channel>
+</rss>

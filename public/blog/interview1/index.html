@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>JimChien</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="面試題目">
+  <meta name="author" content="Jim Chien">
+  <meta name="generator" content="Hugo 0.88.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://demo.gethugothemes.com/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://demo.gethugothemes.com/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://demo.gethugothemes.com/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://demo.gethugothemes.com/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://demo.gethugothemes.com/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://demo.gethugothemes.com/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://demo.gethugothemes.com/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+        <a class="navbar-brand desktop-view text-primary" href="https://demo.gethugothemes.com/">Jim部落格</a>
+        <div style="width: 60%;"></div>
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://demo.gethugothemes.com/blog">文章</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://demo.gethugothemes.com/booklist">讀書清單</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://demo.gethugothemes.com/">關於我</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4" style="float: right;">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://demo.gethugothemes.com//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/%e9%9d%a2%e8%a9%a6"
+          class="text-primary">面試</a>
+        
+        <h2>104 面試前測 Codility</h2>
+        <div class="mb-3 post-meta">
+          <span>By Jim Chien</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021/06/30</span>
+          
+        </div>
+        <hr>
+        <div class="content mb-5">
+          <!-- raw HTML omitted -->
+<p>前幾天投了104履歷，非常想進這間公司做，然後在昨天時，收到104的一封信，是要先做一份類似小測驗，收到當下滿開心的。</p>
+<p>於是當天下班，我就很興奮地準備來寫這份小測驗，其中遇到一題滿有趣的，順手紀錄一下</p>
+<pre tabindex="0"><code>There are N bulbs, numbered from 1 to N, arranged in a row. The first bulb is
+plugged into the power socket and each successive bulb is connected to the
+previous one (the second bulb to the first, the third bulb to the second, etc.).
+Initially, all the bulbs are turned off. At moment K (for K from 0 to N-1), we
+turn on the A[K]-th bulb. A bulb shines if it is on and all the previous bulbs are
+turned on too.
+Write a function solution that, given an array A of N different integers from
+1 to N, returns the number of moments for which every turned on bulb
+shines.
+Examples:
+1. Given A=[2, 1, 3, 5, 4], the function should return 3.
+
+- At the 0th moment only the 2nd bulb is turned on, but it does
+not shine because the previous one is not on.
+At the 1st moment two bulbs are turned on (1st and 2nd) and
+both of them shine.
+- At the 2nd moment three bulbs are turned on (1st, 2nd and
+3rd) and all of them shine.
+At the 3rd moment four bulbs are turned on (1st, 2nd, 3rd and
+5th), but the 5th bulb does not shine because the previous one
+is not turned on.
+- At the 4th moment five bulbs are turned on (1st, 2nd, 3rd, 4th
+and 5th) and all five of them shine.
+There are three moments (1st, 2nd and 4th) when every turned on bulb
+shines.
+2. Given A=[2, 3, 4, 1, 5], the function should return 2 (at the 3rd and 4th
+moment every turned on bulb shines).
+3. Given A=[1, 3, 4, 2, 5], the function should return 3 (at the 0th, 3rd and 4th
+moment every turned on bulb shines).
+Write an efficient algorithm for the following assumptions:
+N is an integer within the range [1..100,000];
+the elements of A are all distinct;
+each element of array A is an integer within the range [1 ..N].
+</code></pre><p><img src="../../images/post/interview.gif" alt="image"></p>
+<p>這是題目，而我的想法是，以我的了解是，開到第N次時，要亮的的條件是前面燈泡1到燈泡N都必須打開，所以我就每次都檢查，假設開到第三次，我就檢查前面一到三開啟哪的燈，若這中間有大於三的數字，表示說1~3其中一組沒亮，那整組燈就不會亮，於是我開始解題</p>
+<pre tabindex="0"><code>public int sulation(int[] A){
+    int shineTimes = 0;
+    for(int index:A){
+        int round = index + 1;
+        int[] checkArray = Arrays.copyOfRange(A, 0, round);
+        boolean isShine = true;
+        for(int check:checkArray){
+            if(check&gt;round){
+                isShine = false;
+            }
+        }
+        if(isShine){
+            shineTimes++;
+        }
+    }
+    return shineTimes;
+}
+</code></pre><p>後來測驗完後想到的解法是，對陣列跑回圈，並記錄當下開過燈的最大值等於目前的index時，亮的次數就加１</p>
+<p>如前三次為[2,1,3]此時最大值跟index相等，會亮。</p>
+<p>這種作法的時間服雜度為O(N)</p>
+<pre tabindex="0"><code>public class MySolution {
+	public static int sulation(int[] A){
+	    int shineTimes = 0;
+	    int currentMax = 0;
+	    for(int index=0;index&lt;A.length;index++){
+	    	currentMax = Math.max(currentMax, A[index]-1);
+	        if(index==currentMax){
+	            shineTimes++;
+	        }
+	    }
+	    return shineTimes;
+	}
+	public static void main(String[] args) {
+		System.out.println(MySolution.sulation(new int[] {2, 1, 3, 5, 4}));
+		System.out.println(MySolution.sulation(new int[] {2, 3, 4, 1, 5}));
+		System.out.println(MySolution.sulation(new int[] {1, 3, 4, 2, 5}));
+		
+	}
+}
+</code></pre>
+        </div>
+
+        
+        
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="text-capitalize">
+  <div class="container">
+    <div class="row justify-content-center">
+      
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://demo.gethugothemes.com/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://demo.gethugothemes.com/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://demo.gethugothemes.com/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://demo.gethugothemes.com/plugins/slick/slick.min.js"></script>
+
+<script src="https://demo.gethugothemes.com/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://demo.gethugothemes.com/plugins/search/fuse.min.js"></script>
+
+<script src="https://demo.gethugothemes.com/plugins/search/mark.js"></script>
+
+<script src="https://demo.gethugothemes.com/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://demo.gethugothemes.com/js/script.min.js"></script>
+
+
+
+</body>
+</html>

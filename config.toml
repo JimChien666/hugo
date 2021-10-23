@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://demo.gethugothemes.com/"
+baseURL = "https://jimchien666.github.io/"
 languageCode = "zh-tw"
 title = "JimChien"
 theme = "liva-hugo"
