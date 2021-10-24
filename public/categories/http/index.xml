@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Http on JimChien</title>
+    <link>https://jimchien666.github.io/categories/http/</link>
+    <description>Recent content in Http on JimChien</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 23 Oct 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/categories/http/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Http 協議</title>
+      <link>https://jimchien666.github.io/blog/http1/</link>
+      <pubDate>Sat, 23 Oct 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/http1/</guid>
+      <description>資源 (Resource) 當我們想要查看某篇文章，例如我的筆記中 Spring 中控制反轉及依賴注入 這篇文章時，我們會在瀏覽器中輸入網址 http://jimchien666.github.io/blog/post1，當瀏覽器回傳這個頁面時，我們就可以觀看這篇文章，這個回傳結果 (文章)，就是資源 (Resource)。
+URL 從前面知道我們輸入網址 http://jimchien666.</description>
+    </item>
+    
+  </channel>
+</rss>

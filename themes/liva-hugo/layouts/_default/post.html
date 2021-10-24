@@ -1,5 +1,5 @@
 <div class="col-md-12 mb-4">
-    <article class="card">
+    <article class="card" style="border-bottom: 1px solid black;">
         <div class="card-body px-0">
         {{ range .Params.Categories }}
         <a href="{{ `categories/` | relLangURL }}{{ . | urlize | lower }}"
