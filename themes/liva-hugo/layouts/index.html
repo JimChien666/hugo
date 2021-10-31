@@ -27,10 +27,11 @@
               </tbody>
             </table>
             <table class="table table-sm">
-              <h3 style="width: 100%;">好書待讀</h3>
+              <h3>讀書清單</h3>
               <thead>
                 <tr>
                   <th scope="col">書名</th>
+                  <th scope="col">連結</th>
                   <th scope="col">狀態</th>
                   <th scope="col">分享狀態</th>
                 </tr>
@@ -39,27 +40,7 @@
                 {{ range .Site.Params.book }}
                     <tr>
                       <td>{{ .title }}</td>
-                      <td>{{ .status }}</td>
-                      <td>{{ .share }}</td>
-                    </tr>
-                  
-                {{ end }}
-              </tbody>
-            </table>
-            <hr>
-            <table class="table table-sm">
-              <h3>好文待讀</h3>
-              <thead>
-                <tr>
-                  <th scope="col">文章</th>
-                  <th scope="col">狀態</th>
-                  <th scope="col">分享狀態</th>
-                </tr>
-              </thead>
-              <tbody>
-                {{ range .Site.Params.article }}
-                    <tr>
-                      <td><a href="{{ .link }}">{{ .title }}</a></td>
+                      <td><a href='{{ .link }}' target="_blank">連結</a></td>
                       <td>{{ .status }}</td>
                       <td>{{ .share }}</td>
                     </tr>

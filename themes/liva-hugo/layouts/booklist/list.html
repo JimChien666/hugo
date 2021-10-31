@@ -7,10 +7,11 @@
       <div class="col-lg-8 mb-5 mb-lg-0">
         <div class="row">
           <table class="table table-sm">
-            <h3>好書待讀</h3>
+            <h3>讀書清單</h3>
             <thead>
               <tr>
                 <th scope="col">書名</th>
+                <th scope="col">連結</th>
                 <th scope="col">狀態</th>
                 <th scope="col">分享狀態</th>
               </tr>
@@ -19,6 +20,7 @@
               {{ range .Site.Params.book }}
                   <tr>
                     <td>{{ .title }}</td>
+                    <td><a href='{{ .link }}' target="_blank">連結</a></td>
                     <td>{{ .status }}</td>
                     <td>{{ .share }}</td>
                   </tr>
@@ -26,22 +28,24 @@
               {{ end }}
             </tbody>
           </table>
-          <hr>
           <table class="table table-sm">
-            <h3>好文待讀</h3>
+            <h3>學習規劃</h3>
+            <h3>(Cryptography I)</h3>
             <thead>
               <tr>
-                <th scope="col">文章</th>
-                <th scope="col">狀態</th>
-                <th scope="col">分享狀態</th>
+                <th scope="col">章節</th>
+                <th scope="col">開始日期</th>
+                <th scope="col">結束日期</th>
+                <th scope="col">完成</th>
               </tr>
             </thead>
             <tbody>
-              {{ range .Site.Params.article }}
+              {{ range .Site.Params.learn }}
                   <tr>
-                    <td><a href="{{ .link }}">{{ .title }}</a></td>
+                    <td>{{ .title }}</td>
+                    <td>{{ .start }}</td>
+                    <td>{{ .end }}</td>
                     <td>{{ .status }}</td>
-                    <td>{{ .share }}</td>
                   </tr>
                 
               {{ end }}

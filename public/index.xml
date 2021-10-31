@@ -6,7 +6,17 @@
     <description>Recent content on JimChien</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-tw</language>
-    <lastBuildDate>Sat, 23 Oct 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 30 Oct 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>對稱性加密(Symmetric Ciphers)</title>
+      <link>https://jimchien666.github.io/blog/crypto1/</link>
+      <pubDate>Sat, 30 Oct 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/crypto1/</guid>
+      <description>定義:
+a cipher defined over (K, M, C) is a pair of &amp;quot;efficient&amp;quot; algs (E, D) where E: K * M -&amp;gt; C, D: K * C -&amp;gt; M , s.</description>
+    </item>
+    
     <item>
       <title>初次認識 Http</title>
       <link>https://jimchien666.github.io/blog/http1/</link>

@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="this is meta description">
+  <meta name="description" content="OTP 概念簡述">
   <meta name="author" content="Jim Chien">
   <meta name="generator" content="Hugo 0.88.1" />
 
@@ -100,122 +100,90 @@
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
-  <div class="widgets">
-    
-    <div class="widget">
-      
-      
-      <img src="https://jimchien666.github.io/images/author.jpg" alt=""
-        class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-      
-      <p>學習、紀錄、講幹話。</p>
-      
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">分類</h4>
-      <ul class="list-unstyled">
-        <li><a
-            href="/categories/http">HTTP</a>
-        </li>
-        <li><a
-            href="/categories/java">Java</a>
-        </li>
-        <li><a
-            href="/categories/%e5%af%86%e7%a2%bc%e5%ad%b8">密碼學</a>
-        </li>
-        <li><a
-            href="/categories/%e9%9d%a2%e8%a9%a6">面試</a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">標籤</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/http">HTTP</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/java">Java</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/spring">Spring</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/%e5%af%86%e7%a2%bc%e5%ad%b8">密碼學</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97">面試心得</a></li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">社群</h4>
-      <ul class="list-inline">
+      <div class="col-lg-10 mx-auto">
         
-        <li class="list-inline-item"><a href="https://github.com/JimChien666"><i class="ti-github"></i></a></li>
+        <a href="/categories/%e5%af%86%e7%a2%bc%e5%ad%b8"
+          class="text-primary">密碼學</a>
         
-        <li class="list-inline-item"><a href="https://github.com/JimChien666"><i class="ti-twitter"></i></a></li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          <table class="table table-sm">
-            <h3>好書待讀</h3>
-            <thead>
-              <tr>
-                <th scope="col">書名</th>
-                <th scope="col">狀態</th>
-                <th scope="col">分享狀態</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-                  <tr>
-                    <td>30天與Docker做好朋友</td>
-                    <td>未讀</td>
-                    <td>想分享</td>
-                  </tr>
-                
-              
-            </tbody>
-          </table>
-          <hr>
-          <table class="table table-sm">
-            <h3>好文待讀</h3>
-            <thead>
-              <tr>
-                <th scope="col">文章</th>
-                <th scope="col">狀態</th>
-                <th scope="col">分享狀態</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-                  <tr>
-                    <td><a href="https://odetocode.com/Articles/741.aspx">A Software Developer&#39;s Guide to HTTP</a></td>
-                    <td>已讀</td>
-                    <td>想分享</td>
-                  </tr>
-                
-              
-                  <tr>
-                    <td><a href="https://mileschou.github.io/ironman/2019/analyze-laravel">Laravel 原始碼分析</a></td>
-                    <td>未讀</td>
-                    <td>想分享</td>
-                  </tr>
-                
-              
-            </tbody>
-          </table>
+        <h2>對稱性加密(Symmetric Ciphers)</h2>
+        <div class="mb-3 post-meta">
+          <span>By Jim Chien</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021/10/30</span>
+          
         </div>
+        <hr>
+        <div class="content mb-5">
+          <p>定義:</p>
+<pre tabindex="0"><code>a cipher defined over (K, M, C) is a pair of &quot;efficient&quot; algs (E, D) 
+where E: K * M -&gt; C, D: K * C -&gt; M ,
+s.t. ∀ m ∈ M, k ∈ K: D(k, E(k, m)) = m
+</code></pre><p>在 (K, M, C) 上定義的密碼是一對&quot;高效率&quot;演算法 (E, D)，其中 E: K * M -&gt; C, D: K*C -&gt; M ,使其對於 M 中的所有 m，K 中的所有 k：D(k, E(k, m)) = m</p>
+<ul>
+<li>E 通常是個隨機演算法</li>
+<li>D 通常是個確定性演算法</li>
+</ul>
+<h3 id="一次性加密the-one-time-pad">一次性加密(The One Time Pad)</h3>
+<p>明文 M 跟 密文 C 都是長度為 n 個 bit</p>
+<p>M = C = {0, 1}^n</p>
+<p>K = {0, 1}^n</p>
+<p>Key 是一個隨機且長度同樣為 n 個 bit</p>
+<p>C := E(k, m) = k ⊕ m</p>
+<p>m: 0 1 1 0 1 1 1
+k: 1 0 1 1 0 0 1
+⊕
+c: 1 1 0 1 1 1 0</p>
+<p>D(k, E(k, m)) = D(k, k ⊕ m) = k ⊕ (k ⊕ m) = k ⊕ k ⊕ m = m</p>
+<p>問題：給你一個 訊息 m 和 OTP 加密後的密文 c，可以算出 OTP 的密鑰 k嗎？</p>
+<p>答案：可以，密鑰 k 為 m ⊕ c</p>
+<h3 id="otp-不實用">OTP 不實用</h3>
+<p>當訊息 m 長度太長的時候，密鑰 k 也會很長，所以當 Ann 要和 Bob 對談時，Ann發送消息給 Bob，他傳送一條訊息，就要生成一條跟訊息一樣長的密鑰 k，但雖然不實用， OTP 卻很安全，怎麼樣才能說得上安全呢，我們得先定義&quot;安全性&quot;。</p>
+<h3 id="密碼算法的安全性information-theoretic-security">密碼算法的安全性(Information Theoretic Security)</h3>
+<h4 id="shannon-1949">(shannon 1949)</h4>
+<p>基礎想法: 密文不應該透露任何有關原文的消息。</p>
+<p>定義:
+A cipher (E, D) over (K, M, C) has <strong>perfect secrecy</strong> if</p>
+<pre tabindex="0"><code>∀ m0, m1 ∈ M (len(m0) = len(m1)) and ∀ c ∈ C
+
+Pr[E(k, m0) = c] = Pr[E(k, m1) = c]
+
+where k si uniform in K (k &lt;-r K)
+</code></pre><p>這個意思是當我拿到一串密文 c 時，我不能確定他的原文是 m0 還是 m1，因為他們的機率相等，所以攻擊者無法用密文進行攻擊。</p>
+<p>Lemma: OTP has <strong>perfect secrecy</strong></p>
+<p>證明:</p>
+<ol>
+<li>前情提要：若一組明密文 m, c 的密鑰總數為常數，則 這個加密為 perfect secrecy</li>
+</ol>
+<pre tabindex="0"><code>∀ m, c: Pr[E(k, m) = c] = (#keys k ∈ K s.t. E(k, m) = c)/|K|
+
+so: ∀ m, c: #{k ∈ K: E(k, m) = c} = const.
+
+=&gt; cipher has perfect secrecy
+</code></pre><ol start="2">
+<li>證明 OTP 為 perfect secrecy</li>
+</ol>
+<pre tabindex="0"><code>For OTP: if E(k, m) = c
+=&gt; k ⊕ m = c =&gt; k = m ⊕ c
+
+=&gt;#{k ∈ K: E(k, m) = c} = 1  ∀ m, c
+
+=&gt; OTP has perfect secrecy
+
+</code></pre><p>結論:
+之前學到的替換加密法，因為英文字母的出現頻率，很容易透露出密文與原文之間的關係，但在 OTP 中，你無法找到密文與原文之間的關係。因為當你獲得密文 c 時，他的原文 m0, m1 機率相等，所以具有安全性。但是，還是有其他方法可能攻破這個 OTP，再他的密鑰太長，不方便使用。那麼是否有比較短的密鑰 k 也具備安全性呢。這邊有個結論。</p>
+<pre tabindex="0"><code>Thm: perfect secrecy =&gt; |K| &gt;= |M|
+</code></pre><p>這邊的意思是若要有 perfect secrecy，密鑰的長度必須大於原文的長度，也就是說，密鑰長度至少要等於原文長度，才有 perfect secrecy 特性。</p>
+
+        </div>
+
+        
+        
       </div>
     </div>
-    
   </div>
 </section>
+
 
 
 <footer class="text-capitalize">
