@@ -23,7 +23,7 @@ a cipher defined over (K, M, C) is a pair of "efficient" algs (E, D)
 where E: K * M -> C, D: K * C -> M ,
 s.t. ∀ m ∈ M, k ∈ K: D(k, E(k, m)) = m
 ```
-在 (K, M, C) 上定義的密碼是一對"高效率"演算法 (E, D)，其中 E: K * M -> C, D: K*C -> M ,使其對於 M 中的所有 m，K 中的所有 k：D(k, E(k, m)) = m
+在 (K, M, C) 密鑰空間上定義的密碼是一對"高效率"演算法 (E, D)，其中 E: K * M -> C, D: K*C -> M ,使其對於 M 中的所有 m，K 中的所有 k：D(k, E(k, m)) = m
 
 - E 通常是個隨機演算法
 - D 通常是個確定性演算法
