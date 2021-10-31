@@ -68,7 +68,7 @@ A cipher (E, D) over (K, M, C) has **perfect secrecy** if
 
 Pr[E(k, m0) = c] = Pr[E(k, m1) = c]
 
-where k si uniform in K (k <-r K)
+where k is uniform in K (k <-r K)
 ```
 這個意思是當我拿到一串密文 c 時，我不能確定他的原文是 m0 還是 m1，因為他們的機率相等，所以攻擊者無法用密文進行攻擊。
 
