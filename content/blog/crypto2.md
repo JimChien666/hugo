@@ -89,9 +89,3 @@ output r[i] >> 1
 
 這些都不要用！
 
-### 可不可忽略(Negligible and non-negligible)
-
-
-
-ε ≥ 1/2^30 不可忽略(可能發生在 1GB 大小之中)
-ε ≥ 1/2^80 可忽略
