@@ -102,3 +102,7 @@ Thm: perfect secrecy => |K| >= |M|
 ```
 
 這邊的意思是若要有 perfect secrecy，密鑰的長度必須大於原文的長度，也就是說，密鑰長度至少要等於原文長度，才有 perfect secrecy 特性。
+
+以下是這次分享的課程內容，蠻推薦看看的：
+
+Cryptography I https://www.coursera.org/learn/crypto/home/welcome
