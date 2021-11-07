@@ -53,6 +53,10 @@ D(k, c) := c ⊕ G(k)
 choose a ramdon k ∈ K , Pr[A(G(k))|1,...,i = G(k)|i+1] ≥ 1/2 + ε (ε ≥ 1/2^30)
 ```
 
+note. 可不可忽略(Negligible and non-negligible)
+- ε ≥ 1/2^30 不可忽略(可能發生在 1GB 大小之中)
+- ε ≥ 1/2^80 可忽略
+
 定義:
 PRG is unpredictable if it is not predictable
 ```

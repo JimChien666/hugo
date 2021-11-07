@@ -5,7 +5,7 @@
 
   <!-- mobile responsive meta -->
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="This is meta description">
+  <meta name="description" content="串流加密法">
   <meta name="author" content="Jim Chien">
   <meta name="generator" content="Hugo 0.88.1" />
 
@@ -97,121 +97,73 @@
 </header>
 <!-- /navigation -->
 
-
 <section class="section-sm">
   <div class="container">
     <div class="row">
-      <div class="col-lg-4">
-  <div class="widgets">
-    
-    <div class="widget">
-      
-      
-      <img src="https://jimchien666.github.io/images/author.jpg" alt=""
-        class="img-fluid author-thumb-sm d-block mx-auto rounded-circle mb-4">
-      
-      <p>學習、紀錄、講幹話。</p>
-      
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">分類</h4>
-      <ul class="list-unstyled">
-        <li><a
-            href="/categories/http">HTTP</a>
-        </li>
-        <li><a
-            href="/categories/java">Java</a>
-        </li>
-        <li><a
-            href="/categories/%e5%af%86%e7%a2%bc%e5%ad%b8">密碼學</a>
-        </li>
-        <li><a
-            href="/categories/%e9%9d%a2%e8%a9%a6">面試</a>
-        </li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">標籤</h4>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/http">HTTP</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/java">Java</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/spring">Spring</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/%e5%af%86%e7%a2%bc%e5%ad%b8">密碼學</a></li>
-        <li class="list-inline-item"><a class="d-block p-2"
-            href="/tags/%e9%9d%a2%e8%a9%a6%e5%bf%83%e5%be%97">面試心得</a></li>
-      </ul>
-    </div>
-    
-    <div class="widget">
-      <h4 class="widget-title">社群</h4>
-      <ul class="list-inline">
-        
-        <li class="list-inline-item"><a href="https://github.com/JimChien666"><i class="ti-github"></i></a></li>
-        
-        <li class="list-inline-item"><a href="https://github.com/JimChien666"><i class="ti-twitter"></i></a></li>
-        
-      </ul>
-    </div>
-  </div>
-</div>
-
-      <div class="col-lg-8 mb-5 mb-lg-0">
-        <div class="row">
-          
-          
-          <div class="col-md-12 mb-4">
-    <article class="card" style="border-bottom: 1px solid black;">
-        <div class="card-body px-0">
+      <div class="col-lg-10 mx-auto">
         
         <a href="/categories/%e5%af%86%e7%a2%bc%e5%ad%b8"
-            class="text-primary">密碼學</a>
+          class="text-primary">密碼學</a>
         
-        <a href="https://jimchien666.github.io/blog/crypto2/" class="h5 d-block my-3">串流加密法(Stream ciphers)</a>
+        <h2>串流加密法(Stream ciphers)</h2>
         <div class="mb-3 post-meta">
-            <span>Jim Chien</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021/10/30</span>
-            
-        </div>
-        <p class="card-text">串流加密法</p>
-        <a href="https://jimchien666.github.io/blog/crypto2/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span>By Jim Chien</span>
           
-          <div class="col-md-12 mb-4">
-    <article class="card" style="border-bottom: 1px solid black;">
-        <div class="card-body px-0">
-        
-        <a href="/categories/%e5%af%86%e7%a2%bc%e5%ad%b8"
-            class="text-primary">密碼學</a>
-        
-        <a href="https://jimchien666.github.io/blog/crypto1/" class="h5 d-block my-3">對稱性加密(Symmetric Ciphers)</a>
-        <div class="mb-3 post-meta">
-            <span>Jim Chien</span>
-            
-            <span class="border-bottom border-primary px-2 mx-1"></span>
-            <span>2021/10/30</span>
-            
-        </div>
-        <p class="card-text">OTP 概念簡述</p>
-        <a href="https://jimchien666.github.io/blog/crypto1/" class="btn btn-outline-primary">read more</a>
-        </div>
-    </article>
-</div>
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021/10/30</span>
           
         </div>
-      </div>
+        <hr>
+        <div class="content mb-5">
+          <p>上次我們說完 OTP，這次我們來說說讓 OTP 更能更實際應用的方法，也就是串流加密法。</p>
+<p>串流加密這個想法並不是完全隨機的密鑰，而是利用一個叫做 偽隨機密鑰(pseudo-random key)，要解釋他如何運作，要先定義一下 偽隨機生成器(pseudo-random generator)，簡稱 PRG。</p>
+<p>PRG 是一個函數，這個函數 G 將 s 位數的 bit 映射到 n 位數的 bit ，其中 n 遠大於 s，可以想像 {0, 1}^s 這個種子空間為 128 bits 而 {0, 1}^n 可能是 GB 等級的。</p>
+<pre tabindex="0"><code> G: {0, 1}^s -&gt; {0, 1}^n where n &gt;&gt; s
+</code></pre><p>也就是說在這邊給一個 s 位的 input 值 k 經過 G 函數後產生出一個 n 位 output 值 G(k)，在這邊真正隨機的是 k，G(k) 值則是&quot;看起來&quot;隨機。</p>
+<p>所以說加解密變成這樣</p>
+<pre tabindex="0"><code>c = E(k, m) := m ⊕ G(k)
+D(k, c) := c ⊕ G(k)
+</code></pre><p>問題:
+串流加密法是否為 perfect secrecy？
+當然不是，因為他的 key 長度小於 message 長度。那麼他還是安全的嗎？這邊需要給出另一個&quot;安全&quot;的定義，來解釋為何串流加密法是安全的。</p>
+<h3 id="prg-必須是無法預測的">PRG 必須是無法預測的</h3>
+<p>假設 PRG 是可預測的，則存在一個 i 使得 G(k)|1, &hellip;, i
+，&ndash;alg&ndash;&gt; G(k)|i+1,&hellip;,n。
+意思是當我們知道 G(k) 的前 i 項，就可以推出剩餘的項，也代表 PRG 是可預測的，進而代表他不安全。</p>
+<p>為什麼呢，假設有一個攻擊者攔截到密文，且攻擊只知道這段訊息的某些內容，例如我們知道在郵件協議( stmp )，在網路上用標準郵件呼叫最一開始會用冒號，所以他知道訊息開頭片段了，所以將密文前半段與訊息前半段做 xor 可以得到 G(k) 的前半段，又因為他知道前半段就可以推斷出後半段，他就推出整個 G(k) 了，借而推斷出原訊息。</p>
+<p>所以如果 G:K-&gt;{0, 1}^n 是可預測的，則</p>
+<pre tabindex="0"><code>∃ &quot;efficient alg.&quot; A and ∃ 1 ≤ i ≤ n-1 s.t. 
+choose a ramdon k ∈ K , Pr[A(G(k))|1,...,i = G(k)|i+1] ≥ 1/2 + ε (ε ≥ 1/2^30)
+</code></pre><p>定義:
+PRG is unpredictable if it is not predictable</p>
+<pre tabindex="0"><code>=&gt; ∀i: no &quot;eff&quot; adv. can predict bit (i + 1) for &quot;non-neg&quot; ε
+</code></pre><h3 id="不好的-prgs">不好的 PRGs</h3>
+<ol>
+<li>Linear Congruential generator</li>
+</ol>
+<p>有三個參數a, b, p 其中 a,b 是整數，而 p 是質數，然後我們定 r[0] 為種子生產器</p>
+<p>接著根據 r[i] = a * r[i - 1] + b mod p
+算完產生後，i++，繼續往下算&hellip;</p>
+<p>舉例：
+m = 123, a = 5, b = 2 , r[0] = 73
+r[1] = 5 * 73 + 2 = 367 (mod 123) = 121 (mod 123)
+r[2] = 5 * 121 + 2 =  607 (mod 123) = 115 (mod 123)</p>
+<p>&hellip;
+所以生成一段隨機數字 73, 121, 115, &hellip;</p>
+<p>然而這是很容易去預測的，只要給多一些輸出值，就能推算出規律</p>
+<ol start="2">
+<li>glibc random():</li>
+</ol>
+<p>r[i] &lt;- (r[i - 3] + r[i - 31]) % 2^32</p>
+<p>output r[i] &raquo; 1</p>
+<p>這些都不要用！</p>
+<h3 id="可不可忽略negligible-and-non-negligible">可不可忽略(Negligible and non-negligible)</h3>
+<p>ε ≥ 1/2^30 不可忽略(可能發生在 1GB 大小之中)
+ε ≥ 1/2^80 可忽略</p>
 
-      
-      <div class="col-12 mt-5">
+        </div>
+
+        
         
       </div>
     </div>
