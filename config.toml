@@ -128,6 +128,10 @@ share = "想分享"
 [[params.myarticle]]
 title = "跟著官方文件學習Laravel, 並實作出一個會員登入系統"
 link = "https://ithelp.ithome.com.tw/users/20141109/ironman/4412"
+[[params.myarticle]]
+title = "測試初體驗"
+link = "https://hackmd.io/DiVJGOd-Q9Cw0q_B5dkeRA"
+
 
 [[params.learn]]
 title = "第 1 週"

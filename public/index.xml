@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>JimChien</title>
+    <link>https://jimchien666.github.io/</link>
+    <description>Recent content on JimChien</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-tw</language>
+    <lastBuildDate>Sat, 06 Nov 2021 10:07:47 +0600</lastBuildDate><atom:link href="https://jimchien666.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>串流加密法(Stream ciphers)</title>
+      <link>https://jimchien666.github.io/blog/crypto2/</link>
+      <pubDate>Sat, 06 Nov 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/crypto2/</guid>
+      <description>上次我們說完 OTP，這次我們來說說讓 OTP 更能更實際應用的方法，也就是串流加密法。
+串流加密這個想法並不是完全隨機的密鑰，而是利用一個叫做 偽隨機密鑰(pseudo-random key)，要解釋他如何運作，要先定義一下 偽隨機生成器(pseudo-random generator)，簡稱 PRG。</description>
+    </item>
+    
+    <item>
+      <title>對稱性加密(Symmetric Ciphers)</title>
+      <link>https://jimchien666.github.io/blog/crypto1/</link>
+      <pubDate>Sat, 30 Oct 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/crypto1/</guid>
+      <description>定義:
+a cipher defined over (K, M, C) is a pair of &amp;quot;efficient&amp;quot; algs (E, D) where E: K * M -&amp;gt; C, D: K * C -&amp;gt; M , s.</description>
+    </item>
+    
+    <item>
+      <title>初次認識 Http</title>
+      <link>https://jimchien666.github.io/blog/http1/</link>
+      <pubDate>Sat, 23 Oct 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/http1/</guid>
+      <description>資源 (Resource) 當我們想要查看某篇文章，例如我的筆記中 Spring 中控制反轉及依賴注入 這篇文章時，我們會在瀏覽器中輸入網址 http://jimchien666.github.io/blog/post1，當瀏覽器回傳這個頁面時，我們就可以觀看這篇文章，這個回傳結果 (文章)，就是資源 (Resource)。
+URL 從前面知道我們輸入網址 http://jimchien666.</description>
+    </item>
+    
+    <item>
+      <title>104 面試前測 Codility</title>
+      <link>https://jimchien666.github.io/blog/interview1/</link>
+      <pubDate>Wed, 30 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/interview1/</guid>
+      <description>前幾天投了 104 履歷，非常想進這間公司做，然後在昨天時，收到 104 的一封信，是要先做一份類似小測驗，收到當下滿開心的。
+於是當天下班，我就很興奮地準備來寫這份小測驗，其中遇到一題滿有趣的，順手紀錄一下
+There are N bulbs, numbered from 1 to N, arranged in a row.</description>
+    </item>
+    
+    <item>
+      <title>Spring 中控制反轉及依賴注入</title>
+      <link>https://jimchien666.github.io/blog/post1/</link>
+      <pubDate>Tue, 29 Jun 2021 10:07:47 +0600</pubDate>
+      
+      <guid>https://jimchien666.github.io/blog/post1/</guid>
+      <description>IoC = Inversion of Control (控制反轉) 什麼是 IoC 呢？我們以印表機來舉個例子。
+假設這世界上只有Hp品牌的印表機，而學校的老師和同學們都需要一台印表機，這時我們會這麼寫</description>
+    </item>
+    
+  </channel>
+</rss>
