@@ -5,7 +5,7 @@ title = "JimChien"
 theme = "liva-hugo"
 summaryLength = "10"
 paginate = 6
-disqusShortname = ""
+disqusShortname = "jimchien666"
 
 [outputs]
   home = ["HTML", "RSS", "JSON"]
