@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-tw"><head>
+  <meta charset="utf-8">
+  <title>JimChien</title>
+
+  <!-- mobile responsive meta -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="單元測試帶給我的好處">
+  <meta name="author" content="Jim Chien">
+  <meta name="generator" content="Hugo 0.88.1" />
+
+  <!-- plugins -->
+  
+  <link rel="stylesheet" href="https://jimchien666.github.io/plugins/bootstrap/bootstrap.min.css ">
+  
+  <link rel="stylesheet" href="https://jimchien666.github.io/plugins/slick/slick.css ">
+  
+  <link rel="stylesheet" href="https://jimchien666.github.io/plugins/themify-icons/themify-icons.css ">
+  
+  <link rel="stylesheet" href="https://jimchien666.github.io/plugins/venobox/venobox.css ">
+  
+
+  <!-- Main Stylesheet -->
+  
+  <link rel="stylesheet" href="https://jimchien666.github.io/scss/style.min.css" media="screen">
+
+  <!--Favicon-->
+  <link rel="shortcut icon" href="https://jimchien666.github.io/images/favicon.png " type="image/x-icon">
+  <link rel="icon" href="https://jimchien666.github.io/images/favicon.png " type="image/x-icon">
+
+  <!-- google analitycs -->
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'Your ID', 'auto');
+    ga('send', 'pageview');
+  </script>
+
+</head><body>
+<!-- preloader start -->
+<div class="preloader">
+  
+</div>
+<!-- preloader end -->
+<!-- navigation -->
+<header class="navigation" style="box-shadow: 5px 5px 5px rgb(145, 143, 143);">
+  <div class="container">
+    
+    <nav class="navbar navbar-expand-lg navbar-white bg-transparent border-bottom pl-0">
+        <a class="navbar-brand desktop-view text-primary" href="https://jimchien666.github.io/">Jim部落格</a>
+        <div style="width: 60%;"></div>
+        <ul class="navbar-nav">
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://jimchien666.github.io/blog">文章</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://jimchien666.github.io/booklist">讀書清單</a>
+          </li>
+          
+          
+          
+          <li class="nav-item">
+            <a class="nav-link" href="https://jimchien666.github.io/">關於我</a>
+          </li>
+          
+          
+        </ul>
+
+        
+        <!-- search -->
+        <div class="search pl-lg-4" style="float: right;">
+          <button id="searchOpen" class="search-btn"><i class="ti-search"></i></button>
+          <div class="search-wrapper">
+            <form action="https://jimchien666.github.io//search" class="h-100">
+              <input class="search-box px-4" id="search-query" name="s" type="search" placeholder="Type & Hit Enter...">
+            </form>
+            <button id="searchClose" class="search-close"><i class="ti-close text-dark"></i></button>
+          </div>
+        </div>
+        
+    </nav>
+  </div>
+</header>
+<!-- /navigation -->
+
+<section class="section-sm">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-10 mx-auto">
+        
+        <a href="/categories/%e5%96%ae%e5%85%83%e6%b8%ac%e8%a9%a6"
+          class="text-primary">單元測試</a>
+        
+        <h2>單元測試帶給我的好處</h2>
+        <div class="mb-3 post-meta">
+          <span>By Jim Chien</span>
+          
+          <span class="border-bottom border-primary px-2 mx-1"></span>
+          <span>2021/11/13</span>
+          
+        </div>
+        <hr>
+        <div class="content mb-5">
+          <p>在我進入目前公司前，我對測試是陌生的，不了解測試能對程式開發有什麼幫助，而在進入後，主管給我一個任務，讓我實際體會寫測試的好處，今天我想把這項體驗分享給大家。</p>
+<p>而在體驗開始之前，讀者若有以下知識，了解起來會相對輕鬆：</p>
+<ul>
+<li>PHP 基礎程式應用</li>
+<li>Composer 套件管理</li>
+<li>Laravel 框架</li>
+<li>PHPUnit</li>
+</ul>
+<p>若沒問題的話，就讓我們開始一同體會吧！</p>
+<p>首先跟大家說一下任務是什麼，我要時做出一個終極密碼的遊戲，這個遊戲的規則如下</p>
+<ul>
+<li>可選擇玩家人數，場數</li>
+<li>隨機選擇起始玩家，之後依場次更換起始玩家</li>
+<li>規則如終極密碼規則，猜到數字的人獲勝</li>
+<li>先到獲勝場數的玩家獲勝</li>
+</ul>
+<h4 id="遊戲呈現如下">遊戲呈現如下</h4>
+<p><img src="../../images/post/test1.gif" alt="image"></p>
+<p>這隻程式開發過程經歷過三個階段</p>
+<h3 id="寫邏輯---重構---寫測試">寫邏輯 -&gt; 重構 -&gt; 寫測試</h3>
+<p>寫邏輯的階段並沒有遇到太大困難點，主要就是直接將邏輯條列下來，並運用 symfony 進行開發，並沒有想著要如何將程式拆解，但在這時會發現一個問題，沒辦法寫測試，應該說因為邏輯跟互動介面全部擠在一起，若要寫測試的話會相當複雜，於是我們必須進行重構，本次重構有兩個目標：</p>
+<ul>
+<li>互動介面跟遊戲邏輯分開</li>
+<li>將程式搬到 Laravel Commands</li>
+</ul>
+<h4 id="開發流程如下">開發流程如下</h4>
+<p><img src="../../images/post/test2.png" alt="image"></p>
+<p>我們成功將終極密碼的遊戲邏輯重構並模組化，這樣一來我們就能很輕易地將程式搬到 Laravel Commands 上了，且能針對遊戲邏輯的部份開始寫測試。</p>
+<h4 id="開發流程如下-1">開發流程如下</h4>
+<p><img src="../../images/post/test3.png" alt="image"></p>
+<p>在寫測試的過程當中，也會注意到哪些遊戲邏輯拆分的不夠好，需要再拆的更細一些，於是在這來來回回修改過程中，終於把測試給寫好。</p>
+<h4 id="為什麼要單元測試">為什麼要單元測試</h4>
+<p>寫測試就是為了確認程式是照著自己的預期執行，但他帶給我們另一個附加效果，讓程式模組化，因為在寫測試的過程中若遇到不好寫的情況，就可以思考是不是某的方法不只做了一件事情。</p>
+<p>那講到寫測試就一定要提到 3A 原則。</p>
+<h4 id="3a-原則">3A 原則</h4>
+<ul>
+<li>Arrange: 初始化</li>
+<li>Act: 執行測試的目標，獲得測試結果</li>
+<li>Assert: 驗證結果</li>
+</ul>
+<p>他算是寫測試的一個 SOP 吧，若照著這個方法走，寫出來的測試也會比較好閱讀。那以下是我利用 #A 原則撰寫&quot;取得下一位玩家&quot;這個方法的一個測試程式碼。</p>
+<h4 id="3a-範例">3A 範例</h4>
+<p><img src="../../images/post/test4.png" alt="image"></p>
+<p>稍微講解一下，首先我們先讓遊戲內的現在玩家設為第 0 位，於是我們預期當程式執行完&quot;取得下一位玩家&quot;這個方法後，回傳的結果應該是第 1 位玩家。</p>
+<h4 id="測試結果">測試結果</h4>
+<p><img src="../../images/post/test5.png" alt="image"></p>
+<h4 id="順便附上-coverage">順便附上 Coverage</h4>
+<p><img src="../../images/post/test6.png" alt="image"></p>
+<h4 id="結論">結論：</h4>
+<p>寫測試不只是讓寫完的程式能夠自動化的被測試，他也有附加好處，就是能夠有效的將程式模組化，而模組化後，我們就可以很輕鬆的將遊戲邏輯應用在其他地方，讓我從 symfony 要搬到 Laravel Commands 上使用時更加順利，若大家有興趣可以下載<a href="https://github.com/JimChien666/laravelProject">原始碼</a>來看看，謝謝大家收看。</p>
+
+        </div>
+
+        
+        <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "jimchien666" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<footer class="text-capitalize">
+  <div class="container">
+    <div class="row justify-content-center">
+      
+    </div>
+  </div>
+</footer>
+
+<script>
+  var indexURL = "https://jimchien666.github.io/index.json"
+</script>
+
+<!-- JS Plugins -->
+
+<script src="https://jimchien666.github.io/plugins/jQuery/jquery.min.js"></script>
+
+<script src="https://jimchien666.github.io/plugins/bootstrap/bootstrap.min.js"></script>
+
+<script src="https://jimchien666.github.io/plugins/slick/slick.min.js"></script>
+
+<script src="https://jimchien666.github.io/plugins/venobox/venobox.min.js"></script>
+
+<script src="https://jimchien666.github.io/plugins/search/fuse.min.js"></script>
+
+<script src="https://jimchien666.github.io/plugins/search/mark.js"></script>
+
+<script src="https://jimchien666.github.io/plugins/search/search.js"></script>
+
+<!-- Main Script -->
+
+<script src="https://jimchien666.github.io/js/script.min.js"></script>
+
+
+
+</body>
+</html>
