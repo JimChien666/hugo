@@ -100,30 +100,30 @@ link = "https://github.com/JimChien666"
 title = "30天與Docker做好朋友"
 link = "#"
 type = "書"
-status = "未讀"
-share = "想分享"
+status = "開始讀"
+share = ""
 
-[[params.book]]
-title = "A Software Developer's Guide to HTTP"
-link = "https://odetocode.com/Articles/741.aspx"
-type = "文章"
-status = "已讀"
-share = "想分享"
 
 [[params.book]]
 title = "Laravel 原始碼分析"
 link = "https://mileschou.github.io/ironman/2019/analyze-laravel"
 type = "文章"
 status = "未讀"
-share = "想分享"
+share = ""
 
 [[params.book]]
 title = "Cryptography I"
 link = "https://www.coursera.org/learn/crypto/home/welcome"
 type = "線上課程"
-status = "學習中"
-share = "想分享"
+status = "暫停"
+share = ""
 
+[[params.book]]
+title = "A Software Developer's Guide to HTTP"
+link = "https://odetocode.com/Articles/741.aspx"
+type = "文章"
+status = "已讀"
+share = "已分享"
 
 [[params.myarticle]]
 title = "跟著官方文件學習Laravel, 並實作出一個會員登入系統"
@@ -133,38 +133,3 @@ title = "測試初體驗"
 link = "https://hackmd.io/DiVJGOd-Q9Cw0q_B5dkeRA"
 
 
-[[params.learn]]
-title = "第 1 週"
-start = "2021/11/1"
-end = "2021/11/7"
-status = ""
-[[params.learn]]
-title = "第 2 週"
-start = "2021/11/8"
-end = "2021/11/14"
-status = ""
-[[params.learn]]
-title = "第 3 週"
-start = "2021/11/15"
-end = "2021/11/21"
-status = ""
-[[params.learn]]
-title = "第 4 週"
-start = "2021/11/22"
-end = "2021/11/28"
-status = ""
-[[params.learn]]
-title = "第 5 週"
-start = "2021/11/29"
-end = "2021/12/5"
-status = ""
-[[params.learn]]
-title = "第 6 週"
-start = "2021/12/6"
-end = "2021/12/12"
-status = ""
-[[params.learn]]
-title = "第 6 週"
-start = "2021/12/13"
-end = "2021/12/20"
-status = ""
