@@ -1,0 +1,28 @@
+name: Build hugo and upload github.oi automaticly.
+on:
+  push:
+    branches:
+      - master
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@master
+        with:
+          ref: master
+      - name: Setup hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: "0.88.1"
+      - name: Build
+        run: hugo --minify
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          personal_token: ${{ secrets.TOKEN }}
+          publish_dir: ./public
+          external_repository: JimChien666/JimChien666.github.io
+          user_name: JimChien666
+          user_email: 102201018@cc.ncu.edu.tw
+          publish_branch: master
