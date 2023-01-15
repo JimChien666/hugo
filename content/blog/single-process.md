@@ -1,14 +1,12 @@
 ---
 title: "單體式系統介紹"
-date: 2023-01-15T10:07:47+06:00
+date: 2023-01-14T10:07:47+06:00
 draft: false
+
 
 # meta description
 description: "單體式系統介紹"
 
-# taxonomies
-categories:
-  - "微服務"
 
 # post type
 type: "featured"
