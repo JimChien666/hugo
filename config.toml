@@ -97,39 +97,69 @@ icon = "ti-twitter"
 link = "https://github.com/JimChien666"
 
 [[params.book]]
-title = "30天與Docker做好朋友"
-link = "#"
-type = "書"
-status = "開始讀"
-share = ""
+title = "微服務架構"
+done = ""
 
 
 [[params.book]]
-title = "Laravel 原始碼分析"
-link = "https://mileschou.github.io/ironman/2019/analyze-laravel"
-type = "文章"
-status = "未讀"
-share = ""
-
-[[params.book]]
-title = "Cryptography I"
-link = "https://www.coursera.org/learn/crypto/home/welcome"
-type = "線上課程"
-status = "暫停"
-share = ""
-
-[[params.book]]
-title = "A Software Developer's Guide to HTTP"
-link = "https://odetocode.com/Articles/741.aspx"
-type = "文章"
-status = "已讀"
-share = "已分享"
+title = "OAuth2.0 從入門到實戰"
+done = ""
 
 [[params.myarticle]]
-title = "跟著官方文件學習Laravel, 並實作出一個會員登入系統"
-link = "https://ithelp.ithome.com.tw/users/20141109/ironman/4412"
+title = "日語通過 N3 !!!!!!!!(最少 N4 XD)"
+done = ""
 [[params.myarticle]]
-title = "測試初體驗"
-link = "https://hackmd.io/DiVJGOd-Q9Cw0q_B5dkeRA"
+title = "每週都要打羽球!!!"
+done = ""
+[[params.myarticle]]
+title = "完成以下讀書清單!!!"
+done = ""
 
-
+[[params.learn]]
+title = "什麼是微服務？"
+done = "V"
+[[params.learn]]
+title = "如何對微服務塑模"
+done = "V"
+[[params.learn]]
+title = "拆分單體"
+done = ""
+[[params.learn]]
+title = "微服務的溝通風格"
+done = ""
+[[params.learn]]
+title = "實作微服務溝通"
+done = ""
+[[params.learn]]
+title = "工作流程"
+done = ""
+[[params.learn]]
+title = "建置"
+done = ""
+[[params.learn]]
+title = "部署"
+done = ""
+[[params.learn]]
+title = "測試"
+done = ""
+[[params.learn]]
+title = "從監控到可觀察性"
+done = ""
+[[params.learn]]
+title = "資訊安全"
+done = ""
+[[params.learn]]
+title = "彈性"
+done = ""
+[[params.learn]]
+title = "擴展"
+done = ""
+[[params.learn]]
+title = "使用者介面"
+done = ""
+[[params.learn]]
+title = "組織結構"
+done = ""
+[[params.learn]]
+title = "進化的架構師"
+done = ""

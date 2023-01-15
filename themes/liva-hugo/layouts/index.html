@@ -6,23 +6,27 @@
       {{ partial "sidebar.html" . }}
       <div class="col-lg-8 mb-5 mb-lg-0">
         <div class="row">
-          <div style="width: 100%;text-align: center;margin-bottom: 30px;"><h3>我是誰</h3></div>
-          <div>大家好，我是簡佳恩，目前任職於一零四資訊科技，這是我的學習筆記，想把學過的東西記下來加深印象，也利於後續複習。</div>
-          <div>目前使用 PHP 及其框架 LARAVEL 開發，持續學習當中。</div>
+          <div style="width: 100%;text-align: center;margin-bottom: 30px;">
+            <h3>我是誰</h3>
+          </div>
+          <div>大家好，我是簡佳恩，是一名後端工程師，也是打雜小弟，平日寫寫程式，假日打羽球，目前有在學習日文。</div>
+          <div>在這邊，我會分享一些自己學習到的小知識，最近也開始想在這個部落格上，把自己學習日文的過程記錄下來。</div>
           <div style="width: 100%;margin: 30px 0px;">
             <table class="table table-sm">
-              <h3 style="width: 100%;">我的文章</h3>
+              <h3 style="width: 100%;">2023 年度目標</h3>
               <thead>
                 <tr>
-                  <th scope="col">文章</th>
+                  <th scope="col">項目</th>
+                  <th scope="col">是否完成</th>
                 </tr>
               </thead>
               <tbody>
                 {{ range .Site.Params.myarticle }}
-                    <tr>
-                      <td><a href="{{ .link }}">{{ .title }}</a></td>
-                    </tr>
-                  
+                <tr>
+                  <td>{{ .title }}</td>
+                  <td>{{ .done }}</td>
+                </tr>
+
                 {{ end }}
               </tbody>
             </table>
@@ -30,21 +34,17 @@
               <h3>讀書清單</h3>
               <thead>
                 <tr>
-                  <th scope="col">書名</th>
-                  <th scope="col">連結</th>
-                  <th scope="col">狀態</th>
-                  <th scope="col">分享狀態</th>
+                  <th scope="col">項目</th>
+                  <th scope="col">是否完成</th>
                 </tr>
               </thead>
               <tbody>
                 {{ range .Site.Params.book }}
-                    <tr>
-                      <td>{{ .title }}</td>
-                      <td><a href='{{ .link }}' target="_blank">連結</a></td>
-                      <td>{{ .status }}</td>
-                      <td>{{ .share }}</td>
-                    </tr>
-                  
+                <tr>
+                  <td>{{ .title }}</td>
+                  <td>{{ .done }}</td>
+                </tr>
+
                 {{ end }}
               </tbody>
             </table>
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    
+
   </div>
 </section>
 {{ end }}
